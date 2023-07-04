@@ -19,6 +19,7 @@ namespace Logger.CoreFramework.Attributes
             var type = filterContext.HttpContext.Request.RequestType;
             var perfName = $"{filterContext.ActionDescriptor.ActionName}_{type}";
             var stopwatch = new PerformanceTracker(perfName, userId, userName, location, _productName, _layerName, additionalInfo);
+
             filterContext.HttpContext.Items["Stopwatch"] = stopwatch;
         }
         public override void OnResultExecuted(ResultExecutedContext filterContext)

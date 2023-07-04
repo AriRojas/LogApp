@@ -6,7 +6,7 @@ using System.Web;
 
 namespace Logger.CoreFramework
 {
-    public class Helper
+    public class Helpers
     {
         #region Public Methods
 
@@ -140,7 +140,7 @@ namespace Logger.CoreFramework
             }
         }
 
-        private static void GetUserData(Dictionary<string, object> additionalInfo, out string userId, out string userName)
+        internal static void GetUserData(Dictionary<string, object> additionalInfo, out string userId, out string userName)
         {
             userId = string.Empty;
             userName = string.Empty;
